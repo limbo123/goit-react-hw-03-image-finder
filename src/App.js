@@ -1,10 +1,10 @@
 import React from "react";
-import { Puff } from "react-loader-spinner";
 
 import SearchBar from "./components/Searchbar/Searchbar";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import Button from "./components/Button/Button";
 import Modal from "./components/Modal/Modal";
+import Loader from "./components/Loader/Loader"
 import { fetchPhotos } from "./api/pixabay-api";
 
 import "./style.css";
@@ -80,7 +80,7 @@ class App extends React.Component {
           />
         )}
 
-        {this.state.isLoading && <Puff />}
+        {this.state.isLoading && <Loader />}
       </div>
     );
   }
